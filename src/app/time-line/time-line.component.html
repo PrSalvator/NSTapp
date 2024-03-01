@@ -1,0 +1,36 @@
+<p-timeline layout="horizontal">
+</p-timeline>
+<div>
+  <p-selectButton [options]="stateOptions" [(ngModel)]="mode" optionLabel="label" optionValue="mode"></p-selectButton>
+</div>
+<div class="p-timeline p-timeline-horizontal p-timeline-bottom">
+  <div *ngFor="let item of collection; first as isFirst" class="p-timeline-event">
+    <div class="p-timeline-event-content" style="display: flex; flex-direction: column; align-items: center;">
+      <div  *ngIf="item.date.getMonth() === 0" style="text-align: center; margin: auto 0px; font-size: 2.5vh;">
+        {{item.date.getFullYear()}}
+      </div>
+      <div  *ngIf="item.date.getMonth() != 0 && mode" style="color:gray; font-size: 2vh; text-align: center; margin: auto 0px;">
+        {{item.date.toLocaleString('ru', {month: 'short'})}}
+      </div>
+    </div>
+    <div class="p-timeline-event-separator">
+      <div [pTooltip]="tooltipContent" *ngIf="item.isStart" class="p-timeline-event-marker" tooltipPosition="top"></div>
+      <div [pTooltip]="tooltipContent" *ngIf="item.isFinish" class="p-timeline-event-marker" tooltipPosition="bottom"></div>
+      <ng-template #tooltipContent>
+        <div style="text-align: center; font-size: 2vh;">
+            <p>{{item.date.toLocaleString('ru', {month: 'long'})}}</p>
+            <p>{{item.date.getFullYear()}}</p>
+        </div>
+      </ng-template>
+      <div *ngIf="!item.isInInterval" class="p-timeline-event-connector"></div>
+      <div *ngIf="item.isInInterval" class="inInterval p-timeline-event-connector"></div>
+    </div>
+    <div *ngIf="!item.isStart && !item.isFinish" class="p-timeline-event-opposite">
+    </div>
+    <div *ngIf="item.isStart || item.isFinish" class="p-timeline-event-opposite">
+      <div class="p-tooltip">
+        sss
+      </div>
+    </div>
+  </div>
+</div>
