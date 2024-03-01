@@ -1,6 +1,6 @@
 # NSTapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+Этот проект разрабатывался с использованием [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
 
 ## Development server
 
