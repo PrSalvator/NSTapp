@@ -6,7 +6,7 @@ import { Component} from '@angular/core';
 })
 export class AppComponent{
   minDate = new Date(2016, 4, 1);
-  maxDate = new Date(2020, 1, 4);
-  startDate = new Date(2017, 4, 1);
+  maxDate = new Date(2019, 1, 4);
+  startDate = new Date(207, 4, 1);
   finishDate = new Date(2019, 10, 4);
 }
