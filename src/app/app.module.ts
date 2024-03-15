@@ -8,6 +8,7 @@ import { AutoFocusModule } from 'primeng/autofocus';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { FormsModule } from '@angular/forms';
 import { TimeLineComponent } from './time-line/time-line.component';
+import { SliderModule } from 'primeng/slider';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { TimeLineComponent } from './time-line/time-line.component';
     TooltipModule,
     AutoFocusModule,
     SelectButtonModule ,
-    FormsModule
+    FormsModule,
+    SliderModule
   ],
   providers: [
     provideClientHydration()
