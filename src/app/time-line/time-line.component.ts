@@ -13,9 +13,6 @@ export class TimeLineComponent implements OnInit, AfterViewInit{
     @Input() startDate: Date; // Дата регулятора начала интервала
     @Input() finishDate: Date; // Дата регулятора конца интервала
 
-    _startDate: Date;
-    _finishDate: Date;
-
     values: Date[] = [];
     rangeValues: number[] = [4, 22];
     minValue: number = 0;
